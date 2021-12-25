@@ -1,0 +1,637 @@
+﻿
+@{
+    ViewBag.Title = "Lớp chấm điểm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var hocky = ViewBag.HocKy as QLĐRenLuyen.Models.EF.tbl_HocKy;
+    var tuchamdiem = ViewBag.TuChamDiem as QLĐRenLuyen.Models.EF.tbl_TieuChi;
+    var lopchamdiem = ViewBag.LopChamDiem as QLĐRenLuyen.Models.EF.tbl_TieuChi;
+}
+
+<section class="tz-information" style="padding: 120px 0 55px">
+
+    <div class="container">
+        @using (Html.BeginForm("ChamDiem_GVCN", "GiaoVien", FormMethod.Post))
+        {
+            <input type="hidden" name="SinhVien_ID" value="@tuchamdiem.SinhVien_ID" />
+            <input type="hidden" name="HocKy_ID" value="@hocky.ID" />
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="text-center text-uppercase">ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CỦA SINH VIÊN @hocky.HocKy NĂM HỌC @hocky.tbl_NamHoc.NamHoc</h3>
+                    <p>Họ và tên: <span style="color: blue">@tuchamdiem.tbl_SinhVien.TenSV</span></p>
+                    <p>Mã sinh viên: <span style="color: blue">@tuchamdiem.tbl_SinhVien.MaSV</span></p>
+                    <p>Lớp: <span style="color: blue">@tuchamdiem.tbl_SinhVien.tbl_Lop.TenLop</span></p>
+                    <p>Điểm rèn luyện tự chấm: <span style="color: blue">@tuchamdiem.TongDiem</span></p>
+                    <p>Điểm rèn luyện lớp chấm: <span style="color: blue">@lopchamdiem.TongDiem</span></p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nội dung và tiêu chí đánh giá</th>
+                                <th scope="col">
+                                    Khung điểm
+                                    tối đa
+                                    (điểm)
+                                </th>
+                                <th scope="col">
+                                    Điểm
+                                    (do sinh viên tự đánh giá)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1. Đánh giá về ý thức tham gia học tập </th>
+                                <td class="text-center">20</td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>a) Ý thức và thái độ trong học tập </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có đi học chuyên cần, đúng giờ, nghiêm túc trong giờ học; đủ điều kiện dự thi tất cả các học phần
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="check_1_1" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không đủ điều kiện dự thi 01 học phần (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="radio" value="2" name="check_1_1" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không đủ điều kiện dự thi từ 02 học phần trở lên (trừ hết số điểm còn lại của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_1_1" class="check_1"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    b. Ý thức và thái độ tham gia các câu lạc bộ học thuật, hoạt động học thuật, hoạt động ngoại khoá, hoạt động nghiên cứu khoa học
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có đăng ký, thực hiện, báo cáo đề tài nghiên cứu khoa học đúng tiến độ hoặc có đăng ký, tham dự kỳ thi sinh viên giỏi các cấp
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_1" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có ý thức tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khoá
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_1" class="check_1"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    c. Ý thức và thái độ trong kỳ thi, kiểm tra đánh giá các học phần
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không vi phạm quy chế thi và kiểm tra
+                                </th>
+                                <td class="text-center">06</td>
+                                <td class="text-center"><input type="radio" value="6" name="check_1_2" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm 01 lần (trừ 2 điểm)
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="check_1_2" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm trên 02 lần (trừ hết điểm của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_1_2" class="check_1"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    d. Tinh thần vượt khó, phấn đấu vươn lên trong học tập
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Được tập thể lớp công nhận có tinh thần vượt khó, phấn đấu vươn lên trong học tập
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_1" class="check_1"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    e. Kết quả học tập
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Điểm TBCHK từ 3,2 đến 4,0
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="TBCHK" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Điểm TBCHK từ 2,0 đến 3,19
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="radio" value="2" name="TBCHK" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Điểm TBCHK dưới 2,0
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="TBCHK" class="check_1"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <b>Cộng mục 1</b>
+                                </th>
+                                <td class="text-center" id="Sum_1" style="color:red"></td>
+                                <td class="text-center"><input type="hidden" name="TieuChi_1" /></td>
+                            </tr>
+                            <tr>
+                                <th>2. Đánh giá về ý thức chấp hành nội quy, quy chế, quy định được thực hiện trong nhà trường</th>
+                                <td class="text-center">25</td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    a) Ý thức chấp hành các văn bản chỉ đạo của ngành, của cấp trên và ĐHĐN được thực hiện trong nhà trường
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức chấp hành các văn bản chỉ đạo của ngành, cấp trên và ĐHĐN được thực hiện trong nhà trường
+                                </th>
+                                <td class="text-center">06</td>
+                                <td class="text-center"><input type="radio" value="6" name="check_2_1" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm 01 lần (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="check_2_1" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm từ lần thứ 2 trở đi (trừ hết số điểm còn lại của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_2_1" class="check_2"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức tham gia đầy đủ, đạt yêu cầu các cuộc vận động, sinh hoạt chính trị theo chủ trương, của cấp trên, ĐHĐN và nhà trường
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="check_2_2" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không tham gia 01 lần hoặc vi phạm quy định của các cuộc vận động (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="radio" value="2" name="check_2_2" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm thứ hai trở đi (trừ hết số điểm còn lại của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_2_2" class="check_2"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    b. Ý thức chấp hành nội quy, quy chế và các quy định của nhà trường
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức chấp hành nội quy, quy chế và các quy định của nhà trường
+                                </th>
+                                <td class="text-center">10</td>
+                                <td class="text-center"><input type="radio" value="10" name="check_2_3" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm 01 lần (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">08</td>
+                                <td class="text-center"><input type="radio" value="8" name="check_2_3" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm thứ hai trở đi (trừ hết số điểm còn lại của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_2_3" class="check_2"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức chấp hành quy định về đóng học phí
+                                </th>
+                                <td class="text-center">05</td>
+                                <td class="text-center"><input type="radio" value="5" name="check_2_4" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không đóng học phí hoặc đóng học phí trễ hạn (không có phép) (trừ 05 điểm)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_2_4" class="check_2"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <b>Cộng mục 2</b>
+                                </th>
+                                <td class="text-center" id="Sum_2" style="color:red"></td>
+                                <td class="text-center"><input type="hidden" name="TieuChi_2" /></td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    3. Đánh giá về ý thức tham gia các hoạt động rèn luyện về chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội
+                                </th>
+                                <td class="text-center">20</td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    a. Ý thức và hiệu quả tham gia các hoạt động rèn luyện về chính trị, xã hội, văn hóa, văn nghệ, thể thao
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Tham gia đầy đủ, đạt yêu cầu “Tuần sinh hoạt công dân sinh viên” (đánh giá chung cho cả hai học kỳ trong năm học)
+                                </th>
+                                <td class="text-center">10</td>
+                                <td class="text-center"><input type="radio" value="10" name="check_3_1" class="check_3"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vắng 01 lần (không có phép) (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">08</td>
+                                <td class="text-center"><input type="radio" value="8" name="check_3_1" class="check_3"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Tham gia nhưng kết quả không đạt, phải học lại (bị trừ 04 điểm)
+                                </th>
+                                <td class="text-center">06</td>
+                                <td class="text-center"><input type="radio" value="6" name="check_3_1" class="check_3"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không tham gia, phải học lại (trừ 10 điểm)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_3_1" class="check_3"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức tham gia đầy đủ, nghiêm túc hoạt động rèn luyện về chính trị, xã hội, văn hóa, văn nghệ, thể thao do nhà trường và ĐHĐN tổ chức, điều động
+
+                                </th>
+                                <td class="text-center">06</td>
+                                <td class="text-center"><input type="radio" value="6" name="check_3_2" class="check_3"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    -Vắng 01 lần (không có phép) (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="check_3_2" class="check_3"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    b) Ý thức tham gia các hoạt động công ích, tình nguyện, công tác xã hội trong nhà trường
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có ý thức tham gia các hoạt động công ích, tình nguyện, công tác xã hội trong nhà trường
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_3" class="check_3"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    c) Ý thức tham gia các hoạt động tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội trong nhà trường
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có ý thức tham gia các hoạt động tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội trong nhà trường
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_3" class="check_3"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <b>Cộng mục 3</b>
+                                </th>
+                                <td class="text-center" id="Sum_3" style="color:red"></td>
+                                <td class="text-center"><input type="hidden" name="TieuChi_3" /></td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    4. Đánh giá về ý thức công dân trong quan hệ cộng đồng
+                                </th>
+                                <td class="text-center">25</td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    a) Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức chấp hành, tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="radio" value="4" name="check_4_1" class="check_4"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm 01 lần (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="radio" value="2" name="check_4_1" class="check_4"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm từ lần thứ hai trở đi (trừ hết số điểm còn lại của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_4_1" class="check_4"></td>
+                            </tr>
+
+                            <tr class="tc">
+                                <th>
+                                    * Có tham gia bảo hiểm y tế (bắt buộc) theo Luật bảo hiểm y tế
+                                </th>
+                                <td class="text-center">10</td>
+                                <td class="text-center"><input type="radio" value="10" name="check_4_2" class="check_4"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Không tham gia bảo hiểm y tế (bắt buộc) (trừ 10 điểm)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="00" name="check_4_2" class="check_4"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    * Có ý thức chấp hành, tham gia tuyên truyền các quy định về bảo đảm an toàn giao thông và “văn hóa giao thông”
+                                </th>
+                                <td class="text-center">05</td>
+                                <td class="text-center"><input type="radio" value="5" name="check_4_3" class="check_4"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm 01 lần (trừ 02 điểm)
+                                </th>
+                                <td class="text-center">03</td>
+                                <td class="text-center"><input type="radio" value="3" name="check_4_3" class="check_4"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Vi phạm từ lần thứ hai trở đi (trừ hết số điểm còn lại của tiêu chí)
+                                </th>
+                                <td class="text-center">00</td>
+                                <td class="text-center"><input type="radio" value="0" name="check_4_3" class="check_4"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    b) Có ý thức tham gia các hoạt động xã hội, có thành tích được ghi nhận, biểu dương, khen thưởng
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có ý thức tham gia các hoạt động xã hội có thành tích được ghi nhận, biểu dương, khen thưởng
+                                </th>
+                                <td class="text-center">04</td>
+                                <td class="text-center"><input type="checkbox" value="4" name="check_4" class="check_4"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    c) Có tinh thần chia sẻ, giúp đỡ người gặp khó khăn, hoạn nạn
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có tinh thần chia sẻ, giúp đỡ người gặp khó khăn, hoạn nạn
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_4" class="check_4"></td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <b>Cộng mục 4</b>
+                                </th>
+                                <td class="text-center" id="Sum_4" style="color:red"></td>
+                                <td class="text-center"><input type="hidden" name="TieuChi_4" /></td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    5. Đánh giá về ý thức và kết quả khi tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong nhà trường hoặc sinh viên đạt được thành tích trong học tập, rèn luyện
+                                </th>
+                                <td class="text-center">10</td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    a) Có ý thức, tinh thần, thái độ, uy tín và đạt hiệu quả công việc khi sinh viên được phân công nhiệm vụ quản lý lớp, các tổ chức Đảng,
+                                    Đoàn Thanh niên, Hội Sinh viên và các tổ chức khác trong nhà trường
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có ý thức, uy tín và hoàn thành tốt nhiệm vụ quản lý lớp, các tổ chức Đảng, Đoàn Thanh niên, Hội Sinh viên, tổ chức khác trong nhà trường
+                                </th>
+                                <td class="text-center">03</td>
+                                <td class="text-center"><input type="checkbox" value="3" name="check_5"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    b) Kỹ năng tổ chức, quản lý lớp, các tổ chức Đảng, Đoàn Thanh niên, Hội Sinh viên và các tổ chức khác trong nhà trường
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Có kỹ năng tổ chức, quản lý lớp, các tổ chức Đảng, Đoàn Thanh niên, Hội Sinh viên và các tổ chức khác trong nhà trường
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_5"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    c) Hỗ trợ và tham gia tích cực các hoạt động chung của tập thể lớp, khoa, trường và ĐHĐN
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Hỗ trợ và tham gia tích cực các hoạt động chung của tập thể lớp, khoa, trường và ĐHĐN
+                                </th>
+                                <td class="text-center">03</td>
+                                <td class="text-center"><input type="checkbox" value="3" name="check_5"></td>
+                            </tr>
+                            <tr class="tc">
+                                <th>
+                                    d) Đạt được thành tích trong học tập, rèn luyện
+                                </th>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    - Đạt thành tích trong học tập, rèn luyện (được tặng bằng khen, giấy khen, chứng nhận, thư khen của các cấp)
+                                </th>
+                                <td class="text-center">02</td>
+                                <td class="text-center"><input type="checkbox" value="2" name="check_5"></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <b>Cộng mục 5</b>
+                                </th>
+                                <td class="text-center" id="Sum_5" style="color:red"></td>
+                                <td class="text-center"><input type="hidden" name="TieuChi_5" /></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <b>Tổng cộng (mục 1 đến mục 5)</b>
+                                </th>
+                                <td class="text-center" id="Total" style="color:red"></td>
+                                <td class="text-center"><input type="hidden" name="TongDiem" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <button style="width: 50%" type="submit" class="btn btn-primary" id="btnSubmit">Gửi</button>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@section jsSection{
+
+    <script>
+        jQuery(document).ready(function ($) {
+            var total_1 = 0, total_2 = 0, total_3 = 0, total_4 = 0, total_5 = 0;
+            
+            $('.check_1').on('change', function () {
+                var sum = 0;
+                $(".check_1:checked").each(function () {
+                    sum += parseInt($(this).val());
+                });
+                total_1 = sum;
+                $('#Sum_1').text(sum)
+                $('input[name="TieuChi_1"]').val(sum);
+            });
+
+
+            $('.check_2').on('change', function () {
+                var sum = 0;
+                $(".check_2:checked").each(function () {
+                    sum += parseInt($(this).val());
+                });
+                total_2 = sum;
+                $('#Sum_2').text(sum)
+                $('input[name="TieuChi_2"]').val(sum);
+            });
+
+            $('.check_3').on('change', function () {
+                var sum = 0;
+                $(".check_3:checked").each(function () {
+                    sum += parseInt($(this).val());
+                });
+                total_3 = sum;
+                $('#Sum_3').text(sum)
+                $('input[name="TieuChi_3"]').val(sum);
+            });
+
+            $('.check_4').on('change', function () {
+                var sum = 0;
+                $(".check_4:checked").each(function () {
+                    sum += parseInt($(this).val());
+                });
+                total_4 = sum;
+                $('#Sum_4').text(sum)
+                $('input[name="TieuChi_4"]').val(sum);
+            });
+
+            $('input[name="check_5"]').on('change', function () {
+                var sum = 0;
+                $('input[name="check_5"]:checked').each(function (index) {
+                    sum += parseInt($(this).val());
+                });
+                total_5 = sum;
+                $('#Sum_5').text(sum);
+                $('input[name="TieuChi_5"]').val(sum);
+
+            });
+
+            $("input[type='radio']").on("change", function () {
+                var total = total_1 + total_2 + total_3 + total_4 + total_5;
+                $('#Total').text(total);
+                $('input[name="TongDiem"]').val(total);
+            });
+            $("input[type='checkbox']").on("change", function () {
+                var total = total_1 + total_2 + total_3 + total_4 + total_5;
+                $('#Total').text(total);
+                $('input[name="TongDiem"]').val(total);
+            });
+        });
+    </script>
+
+}

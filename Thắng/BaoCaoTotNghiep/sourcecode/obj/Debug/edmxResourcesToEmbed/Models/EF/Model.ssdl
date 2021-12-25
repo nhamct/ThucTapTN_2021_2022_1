@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLĐRLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbl_GiaoVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaGV" Type="nchar" MaxLength="50" />
+    <Property Name="MatKhau" Type="nchar" MaxLength="100" />
+    <Property Name="TenGV" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbl_HocKy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HocKy" Type="nvarchar" MaxLength="50" />
+    <Property Name="NamHoc_ID" Type="bigint" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Lop">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLop" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiaoVien_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="tbl_NamHoc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamHoc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_SinhVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaSV" Type="nchar" MaxLength="50" />
+    <Property Name="MatKhau" Type="nchar" MaxLength="100" />
+    <Property Name="TenSV" Type="nvarchar" MaxLength="250" />
+    <Property Name="Lop_ID" Type="bigint" />
+    <Property Name="LopTruong" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_TieuChi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TieuChi_1" Type="int" />
+    <Property Name="TieuChi_2" Type="int" />
+    <Property Name="TieuChi_3" Type="int" />
+    <Property Name="TieuChi_4" Type="int" />
+    <Property Name="TieuChi_5" Type="int" />
+    <Property Name="TongDiem" Type="int" />
+    <Property Name="XepLoai" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayLap" Type="datetime" />
+    <Property Name="LoaiDiem" Type="int" />
+    <Property Name="SinhVien_ID" Type="bigint" />
+    <Property Name="GiaoVien_ID" Type="bigint" />
+    <Property Name="HocKy_ID" Type="bigint" />
+  </EntityType>
+  <Association Name="FK_tbl_HocKy_tbl_NamHoc">
+    <End Role="tbl_NamHoc" Type="Self.tbl_NamHoc" Multiplicity="0..1" />
+    <End Role="tbl_HocKy" Type="Self.tbl_HocKy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_NamHoc">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_HocKy">
+        <PropertyRef Name="NamHoc_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Lop_tbl_GiaoVien">
+    <End Role="tbl_GiaoVien" Type="Self.tbl_GiaoVien" Multiplicity="0..1" />
+    <End Role="tbl_Lop" Type="Self.tbl_Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_GiaoVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Lop">
+        <PropertyRef Name="GiaoVien_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SinhVien_tbl_Lop">
+    <End Role="tbl_Lop" Type="Self.tbl_Lop" Multiplicity="0..1" />
+    <End Role="tbl_SinhVien" Type="Self.tbl_SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Lop">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_SinhVien">
+        <PropertyRef Name="Lop_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_TieuChi_tbl_GiaoVien">
+    <End Role="tbl_GiaoVien" Type="Self.tbl_GiaoVien" Multiplicity="0..1" />
+    <End Role="tbl_TieuChi" Type="Self.tbl_TieuChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_GiaoVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_TieuChi">
+        <PropertyRef Name="GiaoVien_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_TieuChi_tbl_HocKy">
+    <End Role="tbl_HocKy" Type="Self.tbl_HocKy" Multiplicity="0..1" />
+    <End Role="tbl_TieuChi" Type="Self.tbl_TieuChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_HocKy">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_TieuChi">
+        <PropertyRef Name="HocKy_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_TieuChi_tbl_SinhVien">
+    <End Role="tbl_SinhVien" Type="Self.tbl_SinhVien" Multiplicity="0..1" />
+    <End Role="tbl_TieuChi" Type="Self.tbl_TieuChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_SinhVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_TieuChi">
+        <PropertyRef Name="SinhVien_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="QLĐRLModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_GiaoVien" EntityType="Self.tbl_GiaoVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HocKy" EntityType="Self.tbl_HocKy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Lop" EntityType="Self.tbl_Lop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_NamHoc" EntityType="Self.tbl_NamHoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SinhVien" EntityType="Self.tbl_SinhVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TieuChi" EntityType="Self.tbl_TieuChi" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_HocKy_tbl_NamHoc" Association="Self.FK_tbl_HocKy_tbl_NamHoc">
+      <End Role="tbl_NamHoc" EntitySet="tbl_NamHoc" />
+      <End Role="tbl_HocKy" EntitySet="tbl_HocKy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Lop_tbl_GiaoVien" Association="Self.FK_tbl_Lop_tbl_GiaoVien">
+      <End Role="tbl_GiaoVien" EntitySet="tbl_GiaoVien" />
+      <End Role="tbl_Lop" EntitySet="tbl_Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SinhVien_tbl_Lop" Association="Self.FK_tbl_SinhVien_tbl_Lop">
+      <End Role="tbl_Lop" EntitySet="tbl_Lop" />
+      <End Role="tbl_SinhVien" EntitySet="tbl_SinhVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_TieuChi_tbl_GiaoVien" Association="Self.FK_tbl_TieuChi_tbl_GiaoVien">
+      <End Role="tbl_GiaoVien" EntitySet="tbl_GiaoVien" />
+      <End Role="tbl_TieuChi" EntitySet="tbl_TieuChi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_TieuChi_tbl_HocKy" Association="Self.FK_tbl_TieuChi_tbl_HocKy">
+      <End Role="tbl_HocKy" EntitySet="tbl_HocKy" />
+      <End Role="tbl_TieuChi" EntitySet="tbl_TieuChi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_TieuChi_tbl_SinhVien" Association="Self.FK_tbl_TieuChi_tbl_SinhVien">
+      <End Role="tbl_SinhVien" EntitySet="tbl_SinhVien" />
+      <End Role="tbl_TieuChi" EntitySet="tbl_TieuChi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

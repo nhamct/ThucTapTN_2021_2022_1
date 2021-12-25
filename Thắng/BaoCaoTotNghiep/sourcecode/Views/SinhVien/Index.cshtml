@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Điểm rèn luyện";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var diemsv = ViewBag.DiemSV as List<QLĐRenLuyen.Models.EF.tbl_TieuChi>;
+    var sv = Session["sinhvien"] as QLĐRenLuyen.Models.EF.tbl_SinhVien;
+}
+
+    <section class="tz-information" style="padding: 120px 0 55px">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="text-center">KẾT QUẢ RÈN LUYỆN CỦA SINH VIÊN THEO CÁC HỌC KỲ</h3>
+                    <p>Lớp: <span style="color: blue">@sv.tbl_Lop.TenLop</span></p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tổng điểm</th>
+                                <th scope="col">Xếp loại</th>
+                                <th scope="col">Ngày chấm điểm</th>
+                                <th scope="col">Học kỳ</th>
+                                <th scope="col">Năm học</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in diemsv)
+                            {
+                                <tr>
+                                    <th>@item.TongDiem</th>
+                                    <td>@item.XepLoai</td>
+                                    <td>@item.NgayLap.Value.ToString("hh:mm tt dd/MM/yyyy")</td>
+                                    <td>@item.tbl_HocKy.HocKy</td>
+                                    <td>@item.tbl_HocKy.tbl_NamHoc.NamHoc</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var giaovien = Session["giaovien"] as QLĐRenLuyen.Models.EF.tbl_GiaoVien;
+}
+
+<section class="tz-customer" style="padding: 150px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+                @if (TempData["error_change"] != null)
+                {
+                    <div class="alert alert-danger text-center">
+                        @TempData["error_change"]
+                    </div>
+                }
+            </div>
+            <div class="col-lg-6 col-md-9 col-xs-12 col-sm-12">
+                <div class="tz-customer-login">
+                    <h4 class="text-center">Đổi mật khẩu</h4>
+                    @using (Html.BeginForm("ChangePass_SV", "Login", FormMethod.Post, new { @class = "joom-form-login", id = "frmChange" }))
+                    {
+                        <input type="hidden" name="ID" value="@giaovien.ID" />
+                        <div class="row">
+                            <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <label>Mật khẩu cũ:</label>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <input type="password" class="form-control" name="Old_Pass" value="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <label>Mật khẩu mới:</label>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <input type="password" class="form-control" name="New_Pass" id="New_Pass" value="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <label>Nhập lại mật khẩu:</label>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <input type="password" class="form-control" name="Re_Pass" value="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+                                    </div>
+                                    <div class="col-lg-4 col-md-8 col-sm-12 col-xs-12" style="margin-top: 10px;">
+                                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end class row-->
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section jsSection{
+
+    <script>
+         $(document).ready(function () {
+
+            //Khi bàn phím được nhấn và thả ra thì sẽ chạy phương thức này
+            $("#frmChange").validate({
+                rules: {
+                    Old_Pass: "required",
+                    New_Pass: "required",
+                    Re_Pass: {
+                        required: true,
+                        equalTo: "#New_Pass"
+                    }
+                },
+                messages: {
+                    Old_Pass: "Vui lòng nhập mật khẩu cũ",
+                    New_Pass: "Vui lòng nhập mật khẩu mới",
+                    Re_Pass: {
+                        required: "Vui lòng nhập lại mật khẩu",
+                        equalTo: 'Mật khẩu nhập lại không trùng'
+                    }
+                }
+            });
+
+    </script>
+
+}

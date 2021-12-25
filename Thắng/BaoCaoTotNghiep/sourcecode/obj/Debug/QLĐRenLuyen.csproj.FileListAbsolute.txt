@@ -1,0 +1,251 @@
+E:\Part time\New Project\QLĐRenLuyen\bin\QLĐRenLuyen.dll.config
+E:\Part time\New Project\QLĐRenLuyen\bin\QLĐRenLuyen.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\QLĐRenLuyen.pdb
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\csc.exe
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\csc.exe.config
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\csc.rsp
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\csi.exe
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\csi.exe.config
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\csi.rsp
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.AppContext.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Collections.Immutable.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Console.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.IO.Compression.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.IO.FileSystem.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.IO.Pipes.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Reflection.Metadata.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.AccessControl.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.Claims.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.ValueTuple.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Xml.XPath.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\vbc.exe
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\vbc.exe.config
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\vbc.rsp
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\VBCSCompiler.exe
+E:\Part time\New Project\QLĐRenLuyen\bin\roslyn\VBCSCompiler.exe.config
+E:\Part time\New Project\QLĐRenLuyen\bin\Antlr3.Runtime.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\EntityFramework.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\EntityFramework.SqlServer.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\Microsoft.Web.Infrastructure.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\Newtonsoft.Json.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\PagedList.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\PagedList.Mvc.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Helpers.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Mvc.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Optimization.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Razor.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.WebPages.Deployment.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.WebPages.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.WebPages.Razor.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\WebGrease.dll
+E:\Part time\New Project\QLĐRenLuyen\bin\EntityFramework.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\EntityFramework.SqlServer.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\PagedList.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\PagedList.Mvc.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Helpers.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Mvc.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Optimization.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.Razor.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.WebPages.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.WebPages.Deployment.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\System.Web.WebPages.Razor.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\Newtonsoft.Json.xml
+E:\Part time\New Project\QLĐRenLuyen\bin\Antlr3.Runtime.pdb
+E:\Part time\New Project\QLĐRenLuyen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Part time\New Project\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.csprojAssemblyReference.cache
+E:\Part time\New Project\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.csproj.CopyComplete
+E:\Part time\New Project\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.dll
+E:\Part time\New Project\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.pdb
+E:\Part time\New Project\QLĐRenLuyen\bin\Rotativa.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\QLĐRenLuyen.dll.config
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\QLĐRenLuyen.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\QLĐRenLuyen.pdb
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\csc.exe
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\csc.exe.config
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\csc.rsp
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\csi.exe
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\csi.exe.config
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\csi.rsp
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.AppContext.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Console.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.IO.Compression.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.IO.Pipes.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.Claims.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.ValueTuple.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Xml.XPath.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\vbc.exe
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\vbc.exe.config
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\vbc.rsp
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\VBCSCompiler.exe
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Antlr3.Runtime.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\EntityFramework.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\EntityFramework.SqlServer.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Newtonsoft.Json.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\PagedList.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\PagedList.Mvc.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Rotativa.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Helpers.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Mvc.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Optimization.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Razor.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.WebPages.Deployment.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.WebPages.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.WebPages.Razor.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\WebGrease.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\EntityFramework.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\EntityFramework.SqlServer.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\PagedList.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\PagedList.Mvc.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Helpers.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Mvc.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Optimization.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.Razor.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.WebPages.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.WebPages.Deployment.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\System.Web.WebPages.Razor.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Newtonsoft.Json.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Antlr3.Runtime.pdb
+C:\Users\TechCare\Downloads\QLĐRenLuyen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TechCare\Downloads\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.csproj.CoreCompileInputs.cache
+C:\Users\TechCare\Downloads\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.dll
+C:\Users\TechCare\Downloads\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.pdb
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\QLĐRenLuyen.dll.config
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\QLĐRenLuyen.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\QLĐRenLuyen.pdb
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\csc.exe
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\csc.exe.config
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\csc.rsp
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\csi.exe
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\csi.exe.config
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\csi.rsp
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.AppContext.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Console.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.IO.Compression.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.IO.Pipes.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.Claims.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.ValueTuple.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Xml.XPath.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\vbc.exe
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\vbc.exe.config
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\vbc.rsp
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\VBCSCompiler.exe
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Antlr3.Runtime.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\EntityFramework.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\EntityFramework.SqlServer.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Newtonsoft.Json.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\PagedList.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\PagedList.Mvc.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Rotativa.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Helpers.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Mvc.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Optimization.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Razor.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.WebPages.Deployment.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.WebPages.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.WebPages.Razor.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\WebGrease.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\EntityFramework.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\EntityFramework.SqlServer.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\PagedList.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\PagedList.Mvc.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Helpers.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Mvc.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Optimization.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.Razor.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.WebPages.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.WebPages.Deployment.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\System.Web.WebPages.Razor.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Newtonsoft.Json.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Antlr3.Runtime.pdb
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.csproj.AssemblyReference.cache
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.csproj.CoreCompileInputs.cache
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.dll
+C:\Users\TechCare\OneDrive\Desktop\QLĐRenLuyen\obj\Debug\QLĐRenLuyen.pdb

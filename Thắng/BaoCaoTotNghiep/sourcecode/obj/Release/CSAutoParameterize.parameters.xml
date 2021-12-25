@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="QLĐRenLuyenEntities-Web.config Connection String" description="QLĐRenLuyenEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.EF.Model.csdl|res://*/Models.EF.Model.ssdl|res://*/Models.EF.Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DOHOANGTHANG\HOANGTHANG;initial catalog=QLĐRL;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\TechCare\\OneDrive\\Desktop\\QLĐRenLuyen\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLĐRenLuyenEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewBag.Title = "Giáo viên chấm điểm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var hocky = ViewBag.HocKy as QLĐRenLuyen.Models.EF.tbl_HocKy;
+    var lop = ViewBag.lop as QLĐRenLuyen.Models.EF.tbl_Lop;
+    var lstSinhVien = ViewBag.lstSinhVien as List<QLĐRenLuyen.Models.EF.tbl_SinhVien>;
+    var diem_tu_cham = ViewBag.DiemTuCham as List<QLĐRenLuyen.Models.EF.tbl_TieuChi>;
+    var diem_lop_cham = ViewBag.DiemLopCham as List<QLĐRenLuyen.Models.EF.tbl_TieuChi>;
+    var diem_gv_cham = ViewBag.DiemGVCham as List<QLĐRenLuyen.Models.EF.tbl_TieuChi>;
+
+    var lstDiemRL = ViewBag.LstDiemRL as List<QLĐRenLuyen.Models.DTO.TieuChiDTO>;
+    var lstHocKy = ViewBag.LstHocKy as List<QLĐRenLuyen.Models.EF.tbl_HocKy>;
+
+    int dem = 1, dem_1 = 1;
+}
+
+@if (hocky != null)
+{
+    <section class="tz-information" style="padding: 120px 0 55px">
+
+        <div class="container">
+            @if (TempData["notify_success"] != null)
+            {
+                <div class="row">
+                    <div class="alert alert-success text-center text-uppercase" id="AlertBox">
+                        @TempData["notify_success"]
+                    </div>
+                </div>
+            }
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="text-center text-uppercase">ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CỦA SINH VIÊN @hocky.HocKy NĂM HỌC @hocky.tbl_NamHoc.NamHoc</h3>
+                    <p>Lớp: <span style="color: blue">@lop.TenLop</span></p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col" class="text-center">Mã sinh viên</th>
+                                <th scope="col">Họ tên sinh viên</th>
+                                <th scope="col" class="text-center">Điểm tự chấm</th>
+                                <th scope="col" class="text-center">Điểm lớp chấm</th>
+                                <th scope="col" class="text-center">Điểm GVCN</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in lstSinhVien)
+                            {
+                                <tr>
+                                    <th class="text-center">@dem</th>
+                                    <th class="text-center">@item.MaSV</th>
+                                    <td>@item.TenSV</td>
+
+                                    <td class="text-center">
+                                        @(diem_tu_cham.Exists(x => x.SinhVien_ID == item.ID) ? diem_tu_cham.FirstOrDefault(x => x.SinhVien_ID == item.ID).TongDiem : null)
+                                    </td>
+                                    <td class="text-center">
+                                        @(diem_lop_cham.Exists(x => x.SinhVien_ID == item.ID) ? diem_lop_cham.FirstOrDefault(x => x.SinhVien_ID == item.ID).TongDiem : null)
+                                    </td>
+                                    <td class="text-center">
+                                        @(diem_gv_cham.Exists(x => x.SinhVien_ID == item.ID) ? diem_gv_cham.FirstOrDefault(x => x.SinhVien_ID == item.ID).TongDiem : null)
+                                    </td>
+                                    <td>
+                                        @if (diem_lop_cham.Exists(x => x.SinhVien_ID == item.ID) && !diem_gv_cham.Exists(x => x.SinhVien_ID == item.ID))
+                                        {
+                                            <a href="/GiaoVien/DuyetDiem/@item.ID" class="btn btn-primary" title="Click để duyệt điểm">Duyệt điểm</a>
+                                            <a href="/GiaoVien/ChamDiem/@item.ID" class="btn btn-success">Chấm điểm</a>
+                                        }
+                                    </td>
+                                </tr>
+                                dem++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
+
+<section class="tz-information" style="padding: 0px 0 55px">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                <h3 class="text-center text-uppercase">KẾT QUẢ RÈN LUYỆN CỦA SINH VIÊN CÁC HỌC KỲ</h3>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-address-book-o fa-fw"></i> Lớp: <span style="color: blue">@lop.TenLop</span>
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    Xuất PDF
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li>
+                                        <a href="#">---Chọn học kỳ---</a>
+                                    </li>
+                                    @foreach (var jtem in lstHocKy)
+                                    {
+                                        if (lstDiemRL.Exists(x => x.HocKy_ID == jtem.ID))
+                                        {
+                                            <li>
+                                                <a href="/GiaoVien/Print_Pdf/@jtem.ID" target="_blank">@jtem.HocKy , năm học @jtem.tbl_NamHoc.NamHoc</a>
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col" class="text-center">Mã sinh viên</th>
+                            <th scope="col">Họ tên sinh viên</th>
+                            <th scope="col" class="text-center">Điểm rèn luyện</th>
+                            <th scope="col" class="text-center">Xếp loại</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var jtem in lstHocKy)
+                        {
+                            if (lstDiemRL.Exists(x => x.HocKy_ID == jtem.ID))
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center">@jtem.HocKy , năm học @jtem.tbl_NamHoc.NamHoc</td>
+                                </tr>
+                                foreach (var item in lstDiemRL.Where(x => x.HocKy_ID == jtem.ID))
+                                {
+                                    <tr>
+                                        <th class="text-center">@dem_1</th>
+                                        <th class="text-center">@item.MaSV</th>
+                                        <td>@item.TenSV</td>
+                                        <td class="text-center">@item.TongDiem</td>
+                                        <td class="text-center">@item.XepLoai</td>
+                                    </tr>
+                                    dem_1++;
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section jsSection{
+
+    <script type="text/javascript">
+        $(function () {
+
+            //nếu không có thao tác gì thì ẩn đi
+            $('#AlertBox').removeClass('hide');
+
+            //Sau khi hiển thị lên thì delay 1s và cuộn lên trên sử dụng slideup
+            $('#AlertBox').delay(2000).slideUp(500);
+
+        });
+    </script>
+
+}
